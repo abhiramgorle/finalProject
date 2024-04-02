@@ -8,7 +8,7 @@ function PlaceItemCard({place}:any) {
     rounded-xl shadow-md hover:scale-105 transition-all cursor-pointer'>
   {place?.photos?  <Image src={BASE_URL_PHOTO+
     "&photo_reference="+place?.photos[0]?.photo_reference+
-    "&key="+process.env.NEXT_PUBLIC_GOOGLE_PLACE_KEY} alt='placeholder'
+    "&key=AIzaSyBXQzxcqABu1DSVjIj2s594CuiK8vO7Z_4"} alt='placeholder'
         width={200} height={80} 
         className='w-full h-[150px] object-cover rounded-t-xl' />:
         <Image src="/placeholder.jpg" alt='placeholder'

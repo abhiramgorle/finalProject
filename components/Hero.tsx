@@ -1,9 +1,15 @@
 import category from '@/data/category'
 import Image from 'next/image'
 import React, { useState } from 'react'
+import getUserLocation from '@/components/GetLocation'
 
 function Hero({userInput}:any) {
   const [searchInput,setSearchInput]=useState<string>();
+  const categorysearch = async (name:string) =>{
+    const location = await getUserLocation() ;
+    userInput(name);
+  }
+
   return (
     <div className='text-center'>
         <div>
@@ -46,7 +52,7 @@ function Hero({userInput}:any) {
                   w-[50%] justify-center gap-5 mt-3'>
                     {category.map((item,index)=>(
                       <div key={index}
-                      onClick={()=>userInput(item.name)}
+                      onClick={()=>categorysearch(item.name)}
                        className='border-[1px] 
                       w-[60px] p-4 bg-white rounded-full z-10
                       hover:border-red-600 shadow-lg

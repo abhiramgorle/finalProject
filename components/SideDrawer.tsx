@@ -43,8 +43,7 @@ function SideDrawer({ place, close }: any) {
             BASE_PHOTO_URL +
             "&photo_reference=" +
             place?.photos[0]?.photo_reference +
-            "&key=" +
-            process.env.NEXT_PUBLIC_GOOGLE_PLACE_KEY
+            "&key=AIzaSyBXQzxcqABu1DSVjIj2s594CuiK8vO7Z_4"
           }
           alt="placeholder"
           width={200}
@@ -139,7 +138,7 @@ function SideDrawer({ place, close }: any) {
             </svg>
             <span>Direction</span>
           </button>
-          <button
+          {/* <button
             className="flex gap-2 p-1 px-3
                  bg-red-500 rounded-full text-white
                  hover:scale-105 transition-all"
@@ -159,7 +158,7 @@ function SideDrawer({ place, close }: any) {
               />
             </svg>
             <span>Share</span>
-          </button>
+          </button> */}
         </div>
         <div className="mt-5">
         <iframe
@@ -167,8 +166,7 @@ function SideDrawer({ place, close }: any) {
                 height={250}
             loading="lazy"
             className="w-full h-[200px] rounded-lg"
-            src={"https://www.google.com/maps/embed/v1/place?key="
-            +process.env.NEXT_PUBLIC_GOOGLE_PLACE_KEY+
+            src={"https://www.google.com/maps/embed/v1/place?key=AIzaSyBXQzxcqABu1DSVjIj2s594CuiK8vO7Z_4"+
             "&q="+place.formatted_address
             }>
             </iframe>
