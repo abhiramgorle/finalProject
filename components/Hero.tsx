@@ -15,8 +15,8 @@ function Hero({userInput}:any) {
         <div>
             <Image src='/bg.png' alt='hero-image'
             width={800}
-            height={200}
-            className='w-full absolute mt-[-100px]' />
+            height={150}
+            className='w-full absolute mt-[1px]' />
             <div className='mt-[40px] z-10'>
                 <h2 className='text-[55px] text-red-600 
                 tracking-widest font-semibold'

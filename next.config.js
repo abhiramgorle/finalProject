@@ -3,7 +3,8 @@ const nextConfig = {
     images:{
         unoptimized: true,
         domains:['maps.googleapis.com']
-    }
-}
+    },
 
-module.exports = nextConfig
+};
+
+module.exports = nextConfig;
